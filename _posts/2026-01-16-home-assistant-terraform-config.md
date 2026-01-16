@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Home Assistant als Code: Een Terraform-achtige Workflow"
-date: 2026-01-17
+date: 2026-01-16
 ---
 
 Home Assistant is een krachtig platform voor domotica, maar de standaard workflow heeft zo zijn beperkingen. Aanpassingen maak je vaak via de UI, configuratie staat verspreid over YAML-bestanden en `.storage/` JSON files, en versiebeheer is lastig. Wat als je Home Assistant kon configureren met dezelfde principes als Infrastructure-as-Code tools zoals Terraform?
