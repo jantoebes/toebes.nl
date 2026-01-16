@@ -116,12 +116,9 @@ body {
 // Content Area
 .content {
   margin-left: 280px;
-  padding: 2rem;
+  padding: 2rem 4rem 2rem 2rem;
   width: 100%;
-}
-
-.content > * {
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 // Typography
