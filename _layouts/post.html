@@ -1,15 +1,12 @@
 ---
 layout: default
 ---
-{% assign latest_post = site.posts.first %}
-
-{% if latest_post %}
 <article>
   <header>
-    <h1>{{ latest_post.title }}</h1>
-    <time datetime="{{ latest_post.date | date_to_xmlschema }}">
-      {% assign m = latest_post.date | date: "%-m" %}
-      {{ latest_post.date | date: "%-d" }}
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {% assign m = page.date | date: "%-m" %}
+      {{ page.date | date: "%-d" }}
       {% case m %}
         {% when '1' %}januari
         {% when '2' %}februari
@@ -24,14 +21,11 @@ layout: default
         {% when '11' %}november
         {% when '12' %}december
       {% endcase %}
-      {{ latest_post.date | date: "%Y" }}
+      {{ page.date | date: "%Y" }}
     </time>
   </header>
   
   <div class="post-content">
-    {{ latest_post.content }}
+    {{ content }}
   </div>
 </article>
-{% else %}
-<p>Nog geen posts gepubliceerd.</p>
-{% endif %}

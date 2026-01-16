@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="{{ '/favicon.svg' | relative_url }}" alt="JT" class="sidebar-icon">
+        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      </div>
+      
+      {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li{% if page.url == post.url %} class="active"{% endif %}>
+          <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+          <span class="post-date">
+            {% assign m = post.date | date: "%-m" %}
+            {{ post.date | date: "%-d" }}
+            {% case m %}
+              {% when '1' %}januari
+              {% when '2' %}februari
+              {% when '3' %}maart
+              {% when '4' %}april
+              {% when '5' %}mei
+              {% when '6' %}juni
+              {% when '7' %}juli
+              {% when '8' %}augustus
+              {% when '9' %}september
+              {% when '10' %}oktober
+              {% when '11' %}november
+              {% when '12' %}december
+            {% endcase %}
+            {{ post.date | date: "%Y" }}
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </aside>
+    
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
