@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Het ReAct Pattern voor AI Agents"
-date: 2026-01-17
+date: 2026-01-16
 ---
 
 Het **ReAct pattern** (Reasoning + Acting) is een krachtige benadering voor het bouwen van intelligente AI agents die kunnen redeneren én handelen.
