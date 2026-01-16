@@ -116,18 +116,18 @@ body {
 // Content Area
 .content {
   margin-left: 280px;
-  padding: 2rem;
-  max-width: 1000px;
+  padding: 2rem 4rem;
+  max-width: 1600px;
   margin-right: auto;
 }
 
 // On very wide screens, center the content
-@media (min-width: 1560px) {
+@media (min-width: 2160px) {
   .content {
     margin-left: auto;
     margin-right: auto;
-    padding-left: calc(280px + 2rem);
-    padding-right: 2rem;
+    padding-left: calc(280px + 4rem);
+    padding-right: 4rem;
   }
 }
 
